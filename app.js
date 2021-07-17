@@ -63,7 +63,7 @@ const limiter = rateLimit({ // 100 limit for same IP in one hr
 app.use('/api',limiter);
 
 app.post('/webhook-checkout',
- express.raw({type: 'application/json'})
+ express.raw({type: 'application/json'}),
  bookingController.webhookCheckout
 ); // why before the body parser? #226 0638
 
