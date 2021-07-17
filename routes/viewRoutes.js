@@ -5,7 +5,7 @@ const bookingController = require('../controllers/bookingController');
 
 const router = express.Router();
 
-router.use(viewController.alerts); // create another middleware for alert, #226 2940
+router.use(viewsController.alerts); // create another middleware for alert, #226 2940
 
 router.get('/',
   // bookingController.createBookingCheckout, // #213, 0610

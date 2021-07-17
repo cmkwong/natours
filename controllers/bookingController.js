@@ -56,7 +56,7 @@ const createBookingCheckout = async(session) => {
   await Booking.create({tour, user, price});    // create document in MongoDB
 };
 
-exports.webhookCheckout = (req, res, next) = {
+exports.webhookCheckout = (req, res, next) => {
   const signature = req.headers['stripe-signature']; // so we need the req keep clean before the body-parser
   let event;
   try {
